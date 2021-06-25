@@ -1,6 +1,10 @@
 <?php
     $randomText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, nobis. Praesentium voluptates eum molestias quia, ipsum harum iste ex dicta et iusto aperiam cupiditate itaque rem earum aut inventore accusantium!";
 
+    $_GET["badword"];
+
+    $randomTextWithoutBadWord = str_replace($_GET["badword"], "***", $randomText);
+
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +21,15 @@
 
     <h2>Random Text legth</h2>
     <p><?php echo strlen($randomText); ?> characters</p>
+
+    <h2>Bad Word</h2>
+    <p><?php echo $_GET["badword"]; ?></p>
+
+    <h2>Random Text without badword</h2>
+    <p><?php echo $randomTextWithoutBadWord; ?></p>
+
+    <h2>Random Text legth without Bad Word</h2>
+    <p><?php echo strlen($randomTextWithoutBadWord); ?> characters</p>
 
     
 </body>
